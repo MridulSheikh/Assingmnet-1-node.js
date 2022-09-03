@@ -2,11 +2,12 @@ const find_random = require("../local_modules/random");
 let data = require("../public/a.json");
 
 module.exports.getAllusers = (req, res) => {
+    const {limit} = (req.query);
     res.status(200).send({
         status: "OK",
         success: true,
         message: "Success",
-        users: data,
+        users: limit ?  data.slice(0,limit) : data,
     })
 }
 
@@ -22,17 +23,25 @@ module.exports.getRandomuser = async (req, res) => {
 
 module.exports.postRandomuers = async (req, res) => {
     const body = req.body;
-    const obj = {
-        id : data.length+1,
-        body
+    if(body.name && body.address && body.contact && body.gender && body.photoUrl){
+        const obj = {
+            id : data.length+1,
+            body
+        }
+        await data.push(obj);
+        res.status(200).send({
+            status: "OK",
+            success: true,
+            message: "Success",
+            post_user: obj
+        })
     }
-    await data.push(obj);
-    res.status(200).send({
-        status: "OK",
-        success: true,
-        message: "Success",
-        post_user: obj
-    })
+    else{
+        res.status(422).send({
+            success: false,
+            message: "information not found!"
+        })
+    }
 }
 
 module.exports.updateRandomuser = async (req, res) => {
@@ -54,7 +63,7 @@ module.exports.updateRandomuser = async (req, res) => {
     else {
         res.status(404).send({
             success: false,
-            message: "user not found",
+            message: "user id not found",
             query: newdata
         })
     }
