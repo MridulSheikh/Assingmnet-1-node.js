@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors");
 const userRoute = require("./routes/v1/users.route.js")
 const fs = require("fs")
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 //middlewars
 app.use(cors());
