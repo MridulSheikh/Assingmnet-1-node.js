@@ -1,0 +1,42 @@
+[
+    {
+        "id" : 1,
+        "body" : {
+            "gender" : "male",
+            "name" : "Mridul Sheikh",
+            "contact" : "+8801883992408",
+            "address" : "Munshiganj, Mawa, Bangladesh",
+            "photoUrl" : "https://hardcore-pike-06484d.netlify.app/static/media/user.d4cd5b3033d35e89cdba.jpg"
+        }
+    },
+    {
+        "id" : 2,
+        "body" : {
+            "gender" : "female",
+            "name" : "Maria Begum",
+            "contact" : "+880169545788",
+            "address" : "Munshiganj, Mawa, Bangladesh",
+            "photoUrl" : "https://hardcore-pike-06484d.netlify.app/static/media/user.d4cd5b3033d35e89cdba.jpg"
+        }
+    },
+    {
+        "id" : 3,
+        "body" : {
+            "gender" : "male",
+            "name" : "Rofikul",
+            "contact" : "+8801883992408",
+            "address" : "Munshiganj, Mawa, Bangladesh",
+            "photoUrl" : "https://hardcore-pike-06484d.netlify.app/static/media/user.d4cd5b3033d35e89cdba.jpg"
+        }
+    },
+    {
+        "id" : 4,
+        "body":{
+            "gender" : "male",
+            "name" : "rabbi",
+            "contact" : "+8801883992408",
+            "address" : "Munshiganj, Mawa, Bangladesh",
+            "photoUrl" : "https://hardcore-pike-06484d.netlify.app/static/media/user.d4cd5b3033d35e89cdba.jpg"
+        }
+    }
+]
